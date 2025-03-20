@@ -1,31 +1,40 @@
 {
   description = "permalik auto";
 
-  inputs.devshell.url = "github:numtide/devshell";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-
-  inputs.flake-compat = {
-    url = "github:edolstra/flake-compat";
-    flake = false;
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
   };
 
-  outputs =
-    {
-      self,
-      flake-utils,
-      devshell,
-      nixpkgs,
-      ...
-    }:
-    flake-utils.lib.eachDefaultSystem (system: {
-      devShells.default =
-        let
-          pkgs = import nixpkgs {
-            inherit system;
+  outputs = { self, nixpkgs }: let
+    pkgs = import nixpkgs {
+      config = {
+        allowUnfree = false;
+      };
+    };
 
-            overlays = [ devshell.overlays.default ];
-          };
-        in
-        pkgs.devshell.mkShell { imports = [ (pkgs.devshell.importTOML ./devshell.toml) ]; };
-    });
+    myPython = pkgs.python312;
+    pythonWithPkgs = myPython.withPackages (pythonPkgs: with pythonPkgs; [
+      pip
+      virtualenvwrapper
+    ]);
+
+    shell = pkgs.mkShell {
+      buildInputs = [
+        pythonWithPkgs
+        pkgs.readline
+      ];
+
+      shellHook = ''
+        VENV=.venv
+        if [ ! -d $VENV ]; then
+          virtualenv $VENV
+        fi
+        source ./$VENV/bin/activate
+        echo "Python virtual environment activated."
+      '';
+    };
+  in {
+    devShell = shell;
+  };
 }
+

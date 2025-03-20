@@ -1,5 +1,0 @@
-# https://github.com/permalik/auto
-[devshell]
-packages = [
-	"python312"
-]
