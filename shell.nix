@@ -1,4 +1,3 @@
-# shell.nix
 let
   flake = import ./flake.nix;
 in
