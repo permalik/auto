@@ -1,5 +1,5 @@
 {
-  description = "permalik auto";
+  description = "auto";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
