@@ -22,6 +22,8 @@
           with pythonPkgs; [
             pip
             virtualenvwrapper
+            isort
+            black
           ]);
       in {
         devShells.default = pkgs.mkShell {
