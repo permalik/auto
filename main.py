@@ -6,7 +6,7 @@ auto
 import argparse
 
 from config.adhoc import init_ssh, ssh_local_to_remote
-from config.cloud_compute import init_cc
+from config.cloud_compute import destroy_cc, init_cc
 
 
 def main():
@@ -45,6 +45,12 @@ def main():
     # Config: Cloud Compute: Init CC
     init_cc_parser = config_subparsers.add_parser("init_cc", help="Set up KVM and QEMU")
     init_cc_parser.set_defaults(func=init_cc)
+
+    # Config: Cloud Compute: Destroy CC
+    init_cc_parser = config_subparsers.add_parser(
+        "destroy_cc", help="Destroy KVM and QEMU"
+    )
+    init_cc_parser.set_defaults(func=destroy_cc)
 
     args = parser.parse_args()
     args.func(args)
