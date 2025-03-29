@@ -5,7 +5,8 @@ auto
 
 import argparse
 
-from config.adhoc import init_ssh
+from config.adhoc import init_ssh, ssh_local_to_remote
+from config.cloud_compute import init_cc
 
 
 def main():
@@ -20,14 +21,30 @@ def main():
     config_parser = subparsers.add_parser("cfg", help="Configuration Programs")
     config_subparsers = config_parser.add_subparsers(dest="program", required=True)
 
-    # Adhoc: : Init SSH
+    # Config: Adhoc: Init SSH
     init_ssh_parser = config_subparsers.add_parser(
         "init_ssh", help="Create Local SSH Key"
     )
     init_ssh_parser.add_argument(
-        "-e", "--email", type=int, help="Email for SSH Key", required=True
+        "-e", "--email", type=str, help="Email for SSH Key", required=True
     )
     init_ssh_parser.set_defaults(func=init_ssh)
+
+    # Config: Adhoc: SSH Local to Remote
+    ssh_local_to_remote_parser = config_subparsers.add_parser(
+        "ssh_local_to_remote", help="Copy SSH from local to remote"
+    )
+    ssh_local_to_remote_parser.add_argument(
+        "-u", "--username", type=str, help="Username for SSH access", required=True
+    )
+    ssh_local_to_remote_parser.add_argument(
+        "-r", "--remote", type=str, help="IP or Server name", required=True
+    )
+    ssh_local_to_remote_parser.set_defaults(func=ssh_local_to_remote)
+
+    # Config: Cloud Compute: Init CC
+    init_cc_parser = config_subparsers.add_parser("init_cc", help="Set up KVM and QEMU")
+    init_cc_parser.set_defaults(func=init_cc)
 
     args = parser.parse_args()
     args.func(args)
