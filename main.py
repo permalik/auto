@@ -6,7 +6,7 @@ auto
 import argparse
 
 from config.adhoc import init_ssh, ssh_local_to_remote
-from config.cloud_compute import destroy_cc, init_cc
+from config.cloud_compute import destroy_cc, init_cc, remove_vm
 from config.volume_group import manage_vg
 
 
@@ -52,6 +52,10 @@ def main():
         "destroy_cc", help="Destroy KVM and QEMU"
     )
     init_cc_parser.set_defaults(func=destroy_cc)
+
+    # Config: Cloud Compute: Remove VM
+    rm_vm_parser = config_subparsers.add_parser("rm_vm", help="Remove VM")
+    rm_vm_parser.set_defaults(func=remove_vm)
 
     # Config: Volume Group: Manage VG
     manage_vg_parser = config_subparsers.add_parser("manage_vg", help="Manage VG Size")

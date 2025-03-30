@@ -22,6 +22,7 @@ def init_cc():
     ]
     install_virtinst = ["sudo", "apt", "install", "-y", "virtinst"]
     # https://mirrors.mit.edu/ubuntu-releases/
+    # http://archive.ubuntu.com/ubuntu/dists/jammy/main/installer-amd64/
     fetch_iso = [
         "sudo",
         "wget",
