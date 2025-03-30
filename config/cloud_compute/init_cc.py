@@ -1,5 +1,17 @@
 import subprocess
 
+# Update privileges (https://github.com/jedi4ever/veewee/issues/996)
+# # sudo vim /etc/libvirt/qemu.conf
+# Stop VM
+# $ sudo virsh destroy vm_name
+# Remove from VM
+# $ sudo virsh edit vm_name
+# <kernel>/home/user/mnt/casper/vmlinuz</kernel>
+# <initrd>/home/user/mnt/casper/initrd</initrd>
+# <cmdline>console=ttyS0</cmdline>
+# Start VM
+# $ sudo virsh start vm_name
+
 
 def init_cc():
     update_apt = ["sudo", "apt-get", "update"]
@@ -74,7 +86,7 @@ def init_cc():
         print(f"Failure: ISO Not Fetched\n{e}")
 
     try:
-        subprocess.run(install_virtinst, check - True)
+        subprocess.run(install_virtinst, check=True)
         print("Success: VIRTINST Installed")
     except subprocess.CalledProcessError as e:
         print(f"Failure: VIRTINST Not Installed\n{e}")
