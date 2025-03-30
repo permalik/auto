@@ -20,6 +20,7 @@ def init_cc():
         "/etc/libvirt/libvirt.conf",
         "~/.config/libvirt/",
     ]
+    install_virtinst = ["sudo", "apt", "install", "-y", "virtinst"]
     # https://mirrors.mit.edu/ubuntu-releases/
     fetch_iso = [
         "sudo",
@@ -70,3 +71,9 @@ def init_cc():
         print("Success: ISO Fetched")
     except subprocess.CalledProcessError as e:
         print(f"Failure: ISO Not Fetched\n{e}")
+
+    try:
+        subprocess.run(install_virtinst, check - True)
+        print("Success: VIRTINST Installed")
+    except subprocess.CalledProcessError as e:
+        print(f"Failure: VIRTINST Not Installed\n{e}")
