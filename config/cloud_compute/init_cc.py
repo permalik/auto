@@ -13,6 +13,21 @@ def init_cc():
     ]
     install_libvirt_clients = ["sudo", "apt-get", "install", "-y", "libvirt-clients"]
     install_bridge_utils = ["sudo", "apt-get", "install", "-y", "bridge-utils"]
+    copy_libvirt_config = [
+        "sudo",
+        "cp",
+        "-rv",
+        "/etc/libvirt/libvirt.conf",
+        "~/.config/libvirt/",
+    ]
+    # https://mirrors.mit.edu/ubuntu-releases/
+    fetch_iso = [
+        "sudo",
+        "wget",
+        "-P",
+        "/var/lib/libvirt/isos",
+        "https://mirrors.mit.edu/ubuntu-releases/24.04.2/ubuntu-24.04.2-live-server-amd64.iso",
+    ]
 
     try:
         subprocess.run(update_apt, check=True)
@@ -43,3 +58,15 @@ def init_cc():
         print("Success: BRIDGE_UTILS Installed")
     except subprocess.CalledProcessError as e:
         print(f"Failure: BRIDGE_UTILS Not Installed\n{e}")
+
+    try:
+        subprocess.run(copy_libvirt_config, check=True)
+        print("Success: LIBVIRT Config Copied")
+    except subprocess.CalledProcessError as e:
+        print(f"Failure: LIBVIRT Config Not Copied\n{e}")
+
+    try:
+        subprocess.run(fetch_iso, check=True)
+        print("Success: ISO Fetched")
+    except subprocess.CalledProcessError as e:
+        print(f"Failure: ISO Not Fetched\n{e}")
