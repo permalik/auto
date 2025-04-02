@@ -15,10 +15,10 @@ variable "vm_hostname" {
 
 variable "ssh_username" {
 	description = "the ssh user"
-	default = "ubuntu"
+	default = "permalik"
 }
 
 variable "ssh_private_key" {
 	description = "the private key"
-	default = "~/.ssh/id_rsa"
+	default = "/home/permalik/.ssh/id_rsa"
 }

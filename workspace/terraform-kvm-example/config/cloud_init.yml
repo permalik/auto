@@ -14,10 +14,10 @@ chpasswd:
     root:password
   expire: false
 users:
-  - name: ubuntu
+  - name: permalik
     sudo: ALL=(ALL) NOPASSWD:ALL
     groups: users, admin
-    home: /home/ubuntu
+    home: /home/permalik
     shell: /bin/bash
     lock_passwd: false
     ssh-authorized-keys:
