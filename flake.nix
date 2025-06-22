@@ -41,8 +41,8 @@
             source ./$VENV/bin/activate
             echo "Python virtual environment activated."
 
-            # Custom Prompt
-            export PS1="\n\[\e[1;32m\][devshell](.venv) \w\n❯ \[\e[0m\]"
+            # Source bashrc
+            . .bashrc
           '';
         };
       }
