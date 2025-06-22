@@ -1,5 +1,12 @@
 #!/bin/zsh
-LLM_DIR="/Users/tymalik/Docs/Git/project/LLM"
+
+if [ "$1" = "dev" ]; then
+    LLM_DIR="/Users/tymalik/Docs/Git/project/LLM"
+else
+    echo "./dstr-blue.sh < env >"
+    echo "Provide Environment: dev, prod"
+    exit 0
+fi
 
 REPOS=(
     blue-web-frontend
