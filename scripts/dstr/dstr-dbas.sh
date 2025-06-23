@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 
-DBAS_DIR="/home/parallels/Docs/Git/construct/DBAS"
+DBAS_DIR="/home/tymalik/Docs/Git/construct/DBAS"
 
 REPOS=(
     dbas
