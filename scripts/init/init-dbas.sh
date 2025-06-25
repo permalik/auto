@@ -1,5 +1,5 @@
-#!/run/current-system/sw/bin/bash
+#!/bin/bash
 
-cd /home/tymalik/Docs/Git/construct/DBAS
+cd /home/parallels/Docs/Git/construct/DBAS
 
 git clone git@github.com:permalik/dbas.git
