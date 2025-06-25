@@ -5,6 +5,7 @@ YYY_DIR="/c/Users/perma/Docs/Git/project/yyyoink"
 REPOS=(
     yyyoink-avalonia
     yyyoink-android
+    yyyoink-api
 )
 
 cd "$YYY_DIR" || exit 1
