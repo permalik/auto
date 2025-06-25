@@ -1,14 +1,22 @@
 #!/bin/zsh
 
-YYY_DIR="/Users/tymalik/Docs/Git/SunsplitStudio/yyyoink"
+YYY_DIR="/Users/tymalik/Docs/Git/project/yyyoink"
 
 REPOS=(
     yyyoink-apple
     yyyoink-web-frontend
     yyyoink-web-backend
+    yyyoink-api
+    yyyoink-preprocess
+    yyyoink-dispatch
+    yyyoink-llm
+    yyyoink-postprocess
+    yyyoink-feedback
+    yyyoink-notification
     yyyoink-core
     yyyoink-portal-frontend
     yyyoink-portal-backend
+    yyyoink-operation
 )
 
 cd "$YYY_DIR" || exit 1
