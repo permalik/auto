@@ -3,7 +3,7 @@
 NTWK_DIR="/Users/tymalik/Docs/Git/construct/NTWK"
 
 REPOS=(
-    ntwk-tcp-http
+    tcp-http
 )
 
 cd "$NTWK_DIR" || exit 1
