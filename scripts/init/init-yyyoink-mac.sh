@@ -3,6 +3,8 @@
 cd /Users/tymalik/Docs/Git/project/yyyoink
 
 git clone git@github.com:permalik/yyyoink-apple.git
+git clone git@github.com:permalik/yyyoink-avalonia.git
+git clone git@github.com:permalik/yyyoink-android.git
 git clone git@github.com:permalik/yyyoink-web-frontend.git
 git clone git@github.com:permalik/yyyoink-web-backend.git
 git clone git@github.com:permalik/yyyoink-api.git

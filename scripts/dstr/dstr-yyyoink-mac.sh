@@ -4,6 +4,8 @@ YYY_DIR="/Users/tymalik/Docs/Git/project/yyyoink"
 
 REPOS=(
     yyyoink-apple
+    yyyoink-avalonia
+    yyyoink-android
     yyyoink-web-frontend
     yyyoink-web-backend
     yyyoink-api
