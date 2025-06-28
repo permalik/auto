@@ -1,6 +1,6 @@
-#!/run/current-system/sw/bin/bash
+#!/bin/zsh
 
-DSAL_DIR="/home/tymalik/Docs/Git/construct/DSAL"
+DSAL_DIR="/Users/tymalik/Docs/Git/construct/DSAL"
 
 REPOS=(
     dsal-c

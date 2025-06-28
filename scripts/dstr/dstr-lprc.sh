@@ -1,6 +1,6 @@
-#!/run/current-system/sw/bin/bash
+#!/bin/zsh
 
-LPRC_DIR="/home/tymalik/Docs/Git/construct/LPRC"
+LPRC_DIR="/Users/tymalik/Docs/Git/construct/LPRC"
 
 REPOS=(
     go-python-interpreter

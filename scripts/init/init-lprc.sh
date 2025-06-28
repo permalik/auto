@@ -1,5 +1,5 @@
-#!/run/current-system/sw/bin/bash
+#!/bin/zsh
 
-cd /home/tymalik/Docs/Git/construct/LPRC
+cd /Users/tymalik/Docs/Git/construct/LPRC
 
 git clone git@github.com:permalik/go-python-interpreter.git
