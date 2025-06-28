@@ -15,6 +15,7 @@ git clone git@github.com:permalik/yyyoink-postprocess.git
 git clone git@github.com:permalik/yyyoink-feedback.git
 git clone git@github.com:permalik/yyyoink-notification.git
 git clone git@github.com:permalik/yyyoink-core.git
+git clone git@github.com:permalik/yyyoink-log.git
 git clone git@github.com:permalik/yyyoink-portal-frontend.git
 git clone git@github.com:permalik/yyyoink-portal-backend.git
 git clone git@github.com:permalik/yyyoink-operation.git

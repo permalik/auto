@@ -16,6 +16,7 @@ REPOS=(
     yyyoink-feedback
     yyyoink-notification
     yyyoink-core
+    yyyoink-log
     yyyoink-portal-frontend
     yyyoink-portal-backend
     yyyoink-operation
