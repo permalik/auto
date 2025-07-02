@@ -1,0 +1,8 @@
+---
+- name: Deploy Proxmox yyyoink-production
+  hosts: yyyoink_production
+  become: true
+
+  roles:
+    - docker_deploy
+    - traefik_deploy

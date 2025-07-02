@@ -1,0 +1,4 @@
+- name: Copy Traefik Docker Compose File
+  copy:
+    src: docker-compose.yml
+    dest: /opt/traefik/docker-compose.yml

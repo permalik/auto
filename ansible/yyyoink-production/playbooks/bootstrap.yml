@@ -1,0 +1,8 @@
+---
+- name: Bootstrap Proxmox yyyoink-production
+  hosts: yyyoink_production
+  become: true
+
+  roles:
+    - docker_bootstrap
+    - traefik_bootstrap

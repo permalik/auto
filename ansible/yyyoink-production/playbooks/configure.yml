@@ -1,0 +1,7 @@
+---
+- name: Configure Proxmox yyyoink-production
+  hosts: yyyoink_production
+  become: true
+
+  roles:
+    - traefik_configure

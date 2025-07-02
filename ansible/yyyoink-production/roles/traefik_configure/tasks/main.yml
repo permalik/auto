@@ -1,0 +1,5 @@
+---
+- name: Create Traefik Directory
+  file:
+    path: /opt/traefik
+    state: directory
