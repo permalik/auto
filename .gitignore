@@ -175,3 +175,5 @@ cython_debug/
 
 # devshell
 /.direnv/
+
+.DS_Store
