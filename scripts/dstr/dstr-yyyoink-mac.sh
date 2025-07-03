@@ -9,12 +9,8 @@ REPOS=(
     yyyoink-web-frontend
     yyyoink-web-backend
     yyyoink-api
-    yyyoink-preprocess
-    yyyoink-dispatch
+    yyyoink-pipeline
     yyyoink-llm
-    yyyoink-postprocess
-    yyyoink-feedback
-    yyyoink-notification
     yyyoink-core
     yyyoink-log
     yyyoink-portal-frontend
