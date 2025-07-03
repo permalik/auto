@@ -1,27 +1,14 @@
 #!/bin/zsh
 
-if [ "$1" = "dev" ]; then
-    LLM_DIR="/Users/tymalik/Docs/Git/project/LLM"
-else
-    echo "./dstr-blue.sh < env >"
-    echo "Provide Environment: dev, prod"
-    exit 0
-fi
+BLUE_DIR="/Users/tymalik/Docs/Git/project/log"
 
 REPOS=(
+    blue-core
     blue-web-frontend
     blue-web-backend
-    blue-api
-    blue-preprocess
-    blue-dispatch
-    blue-core
-    blue-postprocess
-    blue-feedback
-    blue-notification
-    blue-operation
 )
 
-cd "$LLM_DIR" || exit 1
+cd "$BLUE_DIR" || exit 1
 
 for repo in "${REPOS[@]}"; do
     if [ -d "$repo/.git" ]; then
@@ -53,11 +40,11 @@ for repo in "${REPOS[@]}"; do
 
         if [[ "$LOCAL_HASH" = "$REMOTE_HASH" ]]; then
             echo "Deletion Safe: $repo"
-            cd "$LLM_DIR"
+            cd "$BLUE_DIR"
             rm -rf "$repo"
         else
             echo "Unsafe Warning: $repo has unpushed commits."
-            cd "$LLM_DIR"
+            cd "$BLUE_DIR"
         fi
     else
         echo "Cleanup Notice: $repo is not a git repo."
