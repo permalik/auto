@@ -6,15 +6,13 @@ REPOS=(
     yyyoink-apple
     yyyoink-avalonia
     yyyoink-android
-    yyyoink-web-frontend
-    yyyoink-web-backend
+    yyyoink-web
+    yyyoink-portal
+    yyyoink-bff
     yyyoink-api
     yyyoink-pipeline
     yyyoink-llm
     yyyoink-core
-    yyyoink-log
-    yyyoink-portal-frontend
-    yyyoink-portal-backend
     yyyoink-operation
 )
 

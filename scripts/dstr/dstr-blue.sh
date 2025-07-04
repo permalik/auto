@@ -3,9 +3,10 @@
 BLUE_DIR="/Users/tymalik/Docs/Git/project/log"
 
 REPOS=(
+    blue-web
+    blue-portal
+    blue-bff
     blue-core
-    blue-web-frontend
-    blue-web-backend
 )
 
 cd "$BLUE_DIR" || exit 1
