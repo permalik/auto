@@ -12,4 +12,3 @@ git clone git@github.com:permalik/yyyoink-api.git
 git clone git@github.com:permalik/yyyoink-pipeline.git
 git clone git@github.com:permalik/yyyoink-llm.git
 git clone git@github.com:permalik/yyyoink-core.git
-git clone git@github.com:permalik/yyyoink-operation.git

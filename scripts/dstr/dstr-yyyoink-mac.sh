@@ -13,7 +13,6 @@ REPOS=(
     yyyoink-pipeline
     yyyoink-llm
     yyyoink-core
-    yyyoink-operation
 )
 
 cd "$YYY_DIR" || exit 1
