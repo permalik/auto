@@ -10,9 +10,15 @@ REPOS=(
     yyyoink-portal
     yyyoink-bff
     yyyoink-api
-    yyyoink-pipeline
+    yyyoink-preprocess
+    yyyoink-dispatch
     yyyoink-llm
+    yyyoink-postprocess
+    yyyoink-feedback
+    yyyoink-ws
     yyyoink-core
+    yyyoink-query
+    yyyoink-command
 )
 
 cd "$YYY_DIR" || exit 1
